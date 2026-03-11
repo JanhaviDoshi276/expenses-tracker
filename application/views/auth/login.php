@@ -51,7 +51,7 @@
             <div class="mb-4">
               <label class="form-label fw-600" style="font-size:.85rem;">Password</label>
               <input type="password" name="password" class="form-control <?= form_error('password') ? 'is-invalid' : '' ?>"
-                     placeholder="••••••••">
+                     placeholder="Enter Password">
               <div class="invalid-feedback"><?= form_error('password') ?></div>
             </div>
             <button type="submit" class="btn btn-login btn-primary w-100 text-white">
