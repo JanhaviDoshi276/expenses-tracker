@@ -55,13 +55,9 @@ assets/       → assets/
 .htaccess     → (project root)
 ```
 
-### 4. Create the database
-Run in phpMyAdmin or MySQL CLI:
-```sql
-SOURCE /path/to/sql/enhanced_schema.sql;
-```
 
-### 5. Configure credentials
+
+### 4. Configure credentials
 **`application/config/database.php`**
 ```php
 'hostname' => 'localhost',
@@ -75,10 +71,10 @@ SOURCE /path/to/sql/enhanced_schema.sql;
 $config['base_url'] = 'http://localhost/expense-tracker/';
 ```
 
-### 6. Enable mod_rewrite
+### 5. Enable mod_rewrite
 Ensure `.htaccess` is in project root and `AllowOverride All` is set.
 
-### 7. Open in browser
+### 6. Open in browser
 ```
 http://localhost/expense-tracker/
 ```
@@ -111,7 +107,6 @@ This safely adds all new columns (MySQL 5.7 compatible via stored procedures), c
 | **Categories** | Admin CRUD — edit propagates to all expenses. Delete moves expenses to "Unspecified" |
 | **User Management** | Create/edit/delete users, assign roles (admin/user), set category access per user |
 | **Superadmin** | `dev1200@yopmail.com` — permanent, cannot be deleted, full access |
-| **Exchange Rates** | Auto-fetch live rates OR manual override per currency per date |
 | **Export** | CSV (spreadsheet-ready) and PDF (print-ready) with currency conversion |
 | **Profile** | Name, email, preferred currency, avatar upload, change password |
 
